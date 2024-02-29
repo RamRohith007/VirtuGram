@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>VirtuGram</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/png" href="{% static 'images/virtugram.png' %}">
+        <link id="theme-style" rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        {% block content %}
+
+        {% endblock content %}
+        <p id="switch-p">Switch to: <button class="theme-setter" id="light-theme">Dark Mode &nbsp;<i class="fa fa-moon-o" style="font-size:20px"></i></button></p>
+        
+        <script>
+            document.getElementById('light-theme').addEventListener('click', function() {
+                var button = this;
+                var themeStyle = document.getElementById('theme-style');
+                
+                if (themeStyle.getAttribute('href') == "{% static 'css/style.css' %}") {
+                    themeStyle.setAttribute('href', "{% static 'css/darkstyle.css' %}");
+                    button.id = "dark-theme";
+                    button.innerHTML = 'Light Mode &nbsp;<i class="fa fa-sun-o" style="font-size:20px"></i>';
+                } else {
+                    themeStyle.setAttribute('href', "{% static 'css/style.css' %}");
+                    button.id = "light-theme";
+                    button.innerHTML = 'Dark Mode &nbsp;<i class="fa fa-moon-o" style="font-size:20px"></i>';
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,9 @@
+VirtuGram - A sleek and intuitive online video chatting application that connects people across virtual rooms with ease. Leveraging the powerful Agora SDK, it offers high-quality, real-time video and audio communication.
+
+🌟 Features:
+
+Room-Based Joining: Users can enter video chat rooms using unique room names.
+Elegant UI: A simple, yet visually appealing user interface that is fully responsive.
+Agora-Powered: Incorporates Agora SDK for seamless, high-definition streaming.
+Cross-Platform Compatibility: Works flawlessly on various devices and screen sizes.
+User-Friendly: Designed for easy navigation and a pleasant user experience.

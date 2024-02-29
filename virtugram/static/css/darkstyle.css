@@ -1,0 +1,224 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root{
+    --shadow:0 4px 6px -1px rgba(250, 250, 250, 0.1),0 2px 4px -1px rgba(228, 223, 223, 0.6);
+}
+
+body {
+    background-color: rgb(30, 30, 31);
+    color: #e0e0e0;
+}
+
+#switch-p{
+    font-family: "Rubik", sans-serif;
+}
+
+#light-theme{
+    color:#fff;
+    background-color: rgb(122, 122, 127);
+    border-radius: 15px;
+    font-size: 15px;
+}
+#dark-theme{
+    color:#fff;
+    background-color: rgb(122, 122, 127);
+    border-radius: 15px;
+    font-size: 15px;
+}
+/*--LOBBY STYLING--*/
+
+#virtugram-logo{
+    display: block;
+    max-width: 25%;
+    max-height: 25%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+#form-container{
+    width: 100%;
+    max-width: 50%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: var(--shadow);
+    background-color: #1b1c2b;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+#welcome-message{
+    text-align: center;
+    margin: 20px;
+}
+
+#welcome-message h2{
+    font-size: 36px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+#welcome-message p{
+    font-size: 16px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.form-field{
+    margin: 20px;
+}
+
+.form-field label{
+    font-size: 16px;
+    line-height: 1.7em;
+}
+
+.form-field input{
+    width: 100%;
+    height: 50px;
+    border: 2px solid rgb(56, 60, 80);
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.form-field input[type="submit"]{
+    background-color: rgb(47, 20, 65);
+    border: none;
+    color: #fff;
+    font-weight: 300;
+    transition: background-color 0.3s ease, transform 0.3s ease
+}
+
+.form-field input[type="submit"]:hover {
+    background-color: rgb(67, 40, 85);
+    transform: scale(1.05);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+@media screen and (max-width:450px){
+    #form-container{
+        width: 95%;
+    }
+    #welcome-message h2{
+        font-size: 24px;
+    }
+}
+
+/*--ROOM STYLING--*/
+
+#room-name-wrapper{
+    text-align: center;
+    font-size: 18px;
+}
+
+#room_label{
+    text-align: center;
+    font-size: 18px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+ 
+#room_name{
+    font-size: 18px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+#user_name{
+    font-size: 14px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+#video-streams{
+    display: flex;
+    flex-wrap: wrap;
+    height: 85vh;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.video-container{
+    flex-basis: 500px;
+    flex-grow: 1;
+    max-height: 100%;
+    min-height: 350px;
+    border: 1px solid rgb(36, 46, 147);
+    border-radius: 5px;
+    margin: 2px;
+    background-color: rgb(30, 30, 31);
+    position: relative;
+}
+
+.video-player{
+    height: 100%;
+    width: 100%;
+}
+
+.video-player > *{
+    border-radius: 4px;
+}
+
+.username-wrapper{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 9999;
+    background-color: rgba(239, 236, 236, 0.3);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #0e0d0d;
+}
+
+@media screen and (max-width: 1650px) {
+    .video-container{
+        flex-basis: 300px;
+        min-height: 200px;
+    }
+    
+}
+
+
+/*--ROOM STYLING | Controls --*/
+
+#controls-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    column-gap: 1em;
+    position: fixed;
+    bottom: 20px;
+}
+
+.control-icon{
+    height: 40px;
+    width: 40px;
+    box-shadow: var(--shadow);
+    background-color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.control-icon :hover{
+    background-color: #e0e0e0;
+    transform: scale(1.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
